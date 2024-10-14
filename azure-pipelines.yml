@@ -11,7 +11,7 @@ pool:
 variables:
   azureServiceConnectionId: 'myConnection'
   webAppName: 'ngoxuanphap'
-  projectRoot: $(System. DefaultWorkingDirectory)
+  projectRoot: $(System.DefaultWorkingDirectory)
 
 stages:
 - stage: Build
@@ -21,10 +21,10 @@ stages:
     pool: myAgentPool
     steps:
     - script: |
-        export .PATH=$HOME/. local/bin: $PATH
-        python3.9 -m pip install-r.requirements.txt
+        export PATH=$HOME/.local/bin:$PATH
+        python3.9 -m pip install -r requirements.txt
       workingDirectory: $(projectRoot)
-      displayName: 'Step -Install requirements.txt'
+      displayName: 'Step - Install requirements.txt'
 
     - task: ArchiveFiles@2
       displayName: 'Step - Archive files'
