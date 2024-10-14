@@ -7,13 +7,34 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: myAgentPool
+variables:
+  azureServiceConnectionId: 'myConnection'
+  webAppName: 'ngoxuanphap'
+  projectRoot: $(System. DefaultWorkingDirectory)
 
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+stages:
+- stage: Build
+  displayName: Build stage
+  jobs:
+  - job: BuildJob
+    pool: myAgentPool
+    steps:
+    - script: |
+        export .PATH=$HOME/. local/bin: $PATH
+        python3.9 -m pip install-r.requirements.txt
+      workingDirectory: $(projectRoot)
+      displayName: 'Step -Install requirements.txt'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+    - task: ArchiveFiles@2
+      displayName: 'Step - Archive files'
+      inputs:
+        rootFolder0rFile: '$(projectRoot)'
+        includeRootFolder: false
+        archiveType: zip
+        archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
+        replaceExistingArchive: true
+
+    - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
+      displayName: 'Step -Upload package'
+      artifact: drop
