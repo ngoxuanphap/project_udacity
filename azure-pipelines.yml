@@ -8,7 +8,7 @@ trigger:
 
 variables:
   # Azure Resource Manager connection
-  azureServiceConnectionId: 'myServicceConnection'
+  azureServiceConnectionId: 'myServiceConnection'
 
   #Web App Name
   webAppName: 'myWebAppUdacity'
