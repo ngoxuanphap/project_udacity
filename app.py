@@ -1,3 +1,4 @@
+import os
 from flask import Flask, request, jsonify
 from flask.logging import create_logger
 import logging
@@ -9,6 +10,7 @@ from sklearn.preprocessing import StandardScaler
 app = Flask(__name__)
 LOG = create_logger(app)
 LOG.setLevel(logging.INFO)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 def scale(payload):
     """Scales Payload"""
@@ -29,7 +31,7 @@ def predict():
     # Performs an sklearn prediction
     try:
         # Load pretrained model as clf. Try any one model. 
-        clf = joblib.load("./Housing_price_model/LinearRegression.joblib")
+        clf = joblib.load(os.path.join(BASE_DIR, "Housing_price_model", "LinearRegression.joblib"))
         # clf = joblib.load("./Housing_price_model/StochasticGradientDescent.joblib")
         # clf = joblib.load("./Housing_price_model/GradientBoostingRegressor.joblib")
     except:
