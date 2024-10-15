@@ -17,9 +17,9 @@ variables:
   projectRoot: $(System.DefaultWorkingDirectory)
 
   # VM Name
-  vmImageName:'myAgentPool'
+  vmImageName: 'myAgentPool'
 
-  #Python Version
+  # Python Version
   pythonVersion: '3.9'
 
 stages:
