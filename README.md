@@ -1,51 +1,39 @@
 # Overview
 
-<TODO: complete this with an overview of your project>
+This is project CICD use Azure Devops
 
 ## Project Plan
-<TODO: Project Plan
 
 * A link to a Trello board for the project
 * A link to a spreadsheet that includes the original and final project plan>
 
 ## Instructions
 
-<TODO:  
-* Architectural Diagram (Shows how key parts of the system work)>
-
-<TODO:  Instructions for running the Python project.  How could a user with no context run this project without asking you for any help.  Include screenshots with explicit steps to create that work. Be sure to at least include the following screenshots:
-
-* Project running on Azure App Service
-
+* Architectural Diagram
+![Alt text](Evidence/Digram.png)
 * Project cloned into Azure Cloud Shell
+![Alt text](Evidence/2.png)
 
 * Passing tests that are displayed after running the `make all` command from the `Makefile`
-
+![Alt text](Evidence/3.png)
 * Output of a test run
-
-* Successful deploy of the project in Azure Pipelines.  [Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
-
-* Running Azure App Service from Azure Pipelines automatic deployment
-
-* Successful prediction from deployed flask app in Azure Cloud Shell.  [Use this file as a template for the deployed prediction](https://github.com/udacity/nd082-Azure-Cloud-DevOps-Starter-Code/blob/master/C2-AgileDevelopmentwithAzure/project/starter_files/flask-sklearn/make_predict_azure_app.sh).
-The output should look similar to this:
-
-```bash
-udacity@Azure:~$ ./make_predict_azure_app.sh
-Port: 443
-{"prediction":[20.35373177134412]}
-```
-
-* Output of streamed log files from deployed application
-
-> 
+![Alt text](Evidence/4.png)
+* Successful build and deploy of the project in Azure Pipelines. 
+![Alt text](Evidence/5.png)
+* Output
+![Alt text](Evidence/6.png)
+* Successful prediction from deployed flask app in Azure Cloud Shell and test
+![Alt text](Evidence/7.png)
+* Output of streamed log files 
+![Alt text](Evidence/8.png)
 
 ## Enhancements
-
-<TODO: A short description of how to improve the project in the future>
-
+To improve the this project, I thinks:
+- Use Docker
+- Coding Microservices
 ## Demo 
 
-<TODO: Add link Screencast on YouTube>
+Link Demo : https://www.youtube.com/watch?v=2ltw53Fe0Eo
+
 
 
