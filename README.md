@@ -4,8 +4,8 @@ This is project CICD use Azure Devops
 
 ## Project Plan
 
-* A link to a Trello board for the project
-* A link to a spreadsheet that includes the original and final project plan>
+* A link to a Trello board for the project [link](https://trello.com/b/Mu6T4zkp/udacity)
+* A link to a spreadsheet [link](https://1drv.ms/x/c/8ff766691b4f241a/EY-guQtcj9hCrLR1GOu_494Bqf_nPMScXruXrnqJvrcbHA?e=y1I5YN)
 
 ## Instructions
 
@@ -33,7 +33,7 @@ To improve the this project, I thinks:
 - Coding Microservices
 ## Demo 
 
-Link Demo : https://www.youtube.com/watch?v=2ltw53Fe0Eo
+Link Demo : [https://www.youtube.com/watch?v=2ltw53Fe0Eo](https://www.youtube.com/watch?v=R6Dq04qbKSI)
 
-
+[![Python application test with Github Actions](https://github.com/ngoxuanphap/project_udacity/actions/workflows/pythonapp.yml/badge.svg)](https://github.com/ngoxuanphap/project_udacity/actions/workflows/pythonapp.yml)
 
